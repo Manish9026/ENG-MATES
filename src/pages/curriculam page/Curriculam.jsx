@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
+import { days } from '../../data/constant'
 
-const days=[[0,"monday"],[1,"tuesday"],[2,"wednesday"],[3,"thrusday"],[4,"friday"],[5,"saturday"],[6,"sunday"]]
 const Curriculam = () => {
   return (
     <section className="page4" id='curriculum'>

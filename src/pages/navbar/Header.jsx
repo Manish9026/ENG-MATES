@@ -3,8 +3,8 @@ import './style.scss';
 import { LuMenu } from "react-icons/lu";
 import logo from '../../assects/logo.jpeg'
 import { Link } from "react-scroll";
+import { navLink } from '../../data/constant';
 
-const navLink=[['home','Home'],["benefit","Benefits"],['curriculum','curriculum'],['review','Reviews'],['FAQs','FAQS']]
 const Header = () => {
 
   const mobNavHandler=()=>{
