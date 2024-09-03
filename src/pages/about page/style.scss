@@ -1,0 +1,75 @@
+@import '../../css-configration/classes.scss';
+@import '../../css-configration/variables.scss';
+
+
+
+.page5 {
+    min-height: 300px;
+    padding: 10px;
+    @extend .center;
+
+    .container {
+        gap: 30px;
+
+        .content-part {
+            @extend .center;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .card {
+                @extend .center;
+                flex-direction: column;
+                max-width: 300px;
+                min-width: 200px;
+                gap: 5px;
+
+
+                h6 {
+                    font-size: 1.3rem;
+                    color: $secondaryFontColor;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: .9rem;
+                    padding: 0px 10px;
+                }
+
+                button {
+                    background-color: #a4ecf0;
+                    border: hidden;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+
+            }
+        }
+    }
+}
+
+.story-page {
+    .card {
+        border: 1px solid rgb(33, 54, 63);
+        border-radius: 10px;
+        padding: 10px 5px;
+        min-height: 150px
+    }
+
+
+    .pageNo {
+        @extend .center;
+        min-width: 100%;
+        gap: 5px;
+        .box {
+            @extend .center;
+            cursor: pointer;
+            width: 30px;
+            background-color: #d3c5c5;
+            height: 30px;
+            padding: 2px 10px;
+            border-radius: 5px;
+        }
+    }
+}
+

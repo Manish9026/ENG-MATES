@@ -1,0 +1,66 @@
+@import '../../css-configration/classes.scss';
+
+.page3 {
+    @extend .center;
+    // background-color: #bf5c5c;
+min-height: 200px;
+padding: 20px 10px;
+
+    .container {
+        @extend .center;
+        max-width: $containerMaxWidth;
+        flex: 1;
+        padding: 10px;
+        // box-shadow: 1px 4px 6px 0px rgb(236, 225, 225);
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        .content-part {
+            // display: flex;
+            @extend .center;
+            flex-wrap: wrap;
+            flex: 1;
+            width: 100%;
+            gap: 10px;
+            padding: 20px 10px;
+         max-width: $containerMaxWidth;
+
+            // border: 1px solid rgb(255, 255, 255);
+
+            .card {
+                @extend .center;
+                flex-direction: column;
+                min-width: 150px;
+                max-width: 300px;
+                min-height: 200px;
+                padding: 10px;
+                gap: 10px;
+
+                // background-color: #675b5b;
+                .img {
+                    display: flex;
+                    max-width: 300px;
+                    width: 100%;
+
+                    // border: 1px solid white;
+                    // border-radius: 10px;
+                    // padding: 5px;
+                    // min-height: 200px;
+                    // overflow: vi;
+                    img {
+                        width: 100%;
+                        max-width: 300px;
+                        max-height: 200px;
+                        border-radius: 10px;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .content {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

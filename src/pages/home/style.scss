@@ -1,0 +1,177 @@
+@import '../../css-configration/classes.scss';
+@import '../../css-configration/variables.scss';
+@import '../../css-configration/mixins.scss';
+
+
+
+.home-section{
+    ul{
+        margin: 0;
+    }
+    @extend .flexColumn;
+    background-color: $homebgColor;
+    padding: $sectionPadding;
+    justify-content: center;
+    align-items: center;
+    .home-landing{
+        @extend .flex;
+        max-width: 1250px;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        min-height: 250px;
+        justify-content: space-between;
+       
+        .part1{
+            @extend .flexColumn;
+            // margin: 0;
+                min-width: 200px;
+                // border: 1px solid red;
+                gap: 2rem;
+                justify-content: space-between;
+                align-items: stretch;
+                
+                .h-title{
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                }
+                .sub-title{
+                    font-size: .9rem;
+                    text-transform: capitalize;
+                }
+                .h-btn{
+                    @extend .flexColumn;
+                    // border: 1px solid red;
+                    max-width: 200px;
+                    // flex
+                    width: 100%;
+        
+                    .btn{
+                        @extend .center;
+                        border-radius: 5px;
+                        padding: 5px;
+                        max-width: 200px;
+                        flex: 1;
+                        cursor: pointer;
+                        // border: 1px solid red;
+                        text-transform: capitalize;
+                        background: linear-gradient(90deg,white,rgb(231, 140, 241));
+                       
+        
+                    }
+                    .btn-sub-title{
+                        font-size: .8rem;
+                        text-align: center;
+        
+                    }
+                }
+                .home-timer{
+
+                    @extend .center;
+                    // background-color: #fff;
+                    justify-content: flex-start;
+                    gap: 5px;
+                    .card{
+                    @extend .flexColumn;
+                    align-items: center;
+            
+            
+                    .box{
+                    @extend .center;
+                        width: 50px;
+                        height: 50px;
+                        font-size: 1.3rem;
+                        background-color: #f3bd71;
+                        border-radius: 10px;
+                        color: white;
+                        box-shadow:  0px 0px 5px 1px rgb(230, 186, 99) inset;
+                    }
+                    p{
+                        padding: 0;
+                        margin: 0;
+                    }
+                      
+            
+            
+                    }
+                }
+            }
+            .part2{
+                @extend .center;
+                // padding: 20px 0px;
+                video{
+                    max-width: 500px;
+                    // flex: 1;
+                    width: 100%;
+                    max-height: 300px;
+                    border-radius: 10px;
+                }
+            }
+
+            @include sm{
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: center;
+                .title{
+                    text-align: center;
+                }
+                .part1{
+                    align-items: center;
+                }
+            }
+    }
+
+    .home-offer{
+    // @extend .center;
+        display: flex;
+        width: 100%;
+        max-width: 1250px;
+        min-height: 100px;
+        // border: 1px solid red;
+        justify-content: flex-start;
+        padding: 5px;
+        gap: 10px;
+        flex-wrap: wrap;
+        .card{
+            @extend .flexColumn;
+            align-items: center;
+            justify-content: space-around;
+            min-width: 100px;
+            max-width: 150px;
+            min-height: 200px;
+            flex: 1;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.526);
+            padding: 20px;
+            text-transform: capitalize;
+            text-align: center;
+        
+            :nth-child(1){
+                font-size: 1.4rem;
+                font-weight: 800;
+                color: orange;
+            }
+            :nth-child(3){
+                font-size: 1rem;
+                color: orange;
+            }
+
+        }
+       
+    }
+    @include sm{
+     
+            // @extend .center;
+            .home-offer{
+
+                justify-content: center;
+                .card{
+                    max-width: 200px;
+                }
+            }
+        
+    }
+    
+   
+}

@@ -1,0 +1,129 @@
+@import '../../css-configration/classes.scss';
+@import '../../css-configration/mixins.scss';
+
+.page4{
+    @extend .center;
+    padding: 10px;
+
+    
+    .container{
+
+        .content-part{
+            @extend .center;
+            flex-direction: column;
+            // background-color: #f1d9d9;
+            padding: 10px;
+            gap: 20px;
+
+
+            .tracker-nav{
+                @extend .flex, .center;
+                justify-content: space-around;
+                gap: 10px;
+                // border: 1px solid;
+                flex: 1;
+                max-width: 600px;
+                width: 100%;
+                // padding: 10px;
+                li{
+                    text-transform: capitalize;
+                    // margin-bottom: 5px;
+                    font-weight: 600;
+                    padding: 5px;
+                }
+                :nth-child(1){
+                    color:  rgb(241, 181, 71);
+                    border-bottom: 3px solid rgb(229, 190, 117);
+                }
+            }
+            .content{
+            @extend .center;
+            flex-direction: column;
+            gap: 10px;
+            // background-color: #fff;
+            .card{
+            @extend .center;
+            // background-color: #fff;
+            min-height: 100px;
+            // align-items: flex-start;
+                cursor: pointer;
+                position: relative;
+            gap: 10px;
+            padding: 0.5rem 1rem;
+            $boxcolor:rgb(166, 176, 186);
+
+            @include sm{
+                flex-direction: column;
+
+            }
+            .box1{
+            @extend .center ,.flexColumn;
+                width: 100%;
+                max-width: 150px;
+                min-width: 100px;
+                background-color: $boxcolor;
+                flex: 1;
+                min-height: 100px;
+                max-height: 200px;
+                height: 100%;
+                border-radius: 15px;
+                text-transform: capitalize;
+                :nth-child(1){
+                    color: $secondaryFontColor;
+                }
+                :nth-child(2){
+                    color: rgb(217, 217, 231);
+                }
+
+            }
+            .box2{
+                @extend .flex;
+                flex-direction: column;
+                align-items: center;
+                flex: 1;
+                // justify-content: center;
+                background-color: $boxcolor;
+                height: 100%;
+                min-height: 100px;
+                align-items: stretch;
+                border-radius: 15px;
+                padding: 0px 15px ;
+
+                h6{
+                    font-size: 1.1rem;
+                    margin-top: 10px;
+                    color: rgb(56, 135, 199);
+                }
+                p{
+                    font-size: .9rem;
+                }
+
+            }
+
+            }
+
+            @include sm{
+                .card{
+                    gap: 0;
+                    // justify-content: flex-end;
+                    align-items: flex-start;
+                    .box1{
+                        // position: absolute;
+                        max-width: 100px;
+                        height: 20px;
+                        min-height:0;
+                        border-radius: 5px 5px 0px 0px ;
+                        border-bottom: 1px solid rgb(203, 195, 195);
+                    }
+                    .box2{
+                        border-radius: 0px 10px 10px 10px;
+                        padding-bottom: 5px;
+                        color: $cardFontColor;
+
+                    }
+                }
+            }
+            }
+        }
+    }
+}
